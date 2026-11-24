@@ -1,0 +1,36 @@
+{
+  "$schema": "http://desirecore/schemas/agent.json",
+  "name": "邮件营销专员",
+  "version": "0.1.0",
+  "requiredClientVersion": "10.0.203",
+  "description": "开发信草稿、已授权邮件触达和受控往返核验。需用户配置模型及对应账号/服务，费用另计；不可用时仅交付范围受限资料。",
+  "author": "DesireCore contributors",
+  "avatar": {
+    "char": "邮件",
+    "color": "green",
+    "generationPolicy": "disabled"
+  },
+  "llm": {
+    "routingMode": "smart",
+    "reasoning": "auto",
+    "smart": {
+      "profile": {
+        "tier": "balanced",
+        "requiredCapabilities": [
+          "tool_use"
+        ],
+        "reasoning": "auto"
+      }
+    }
+  },
+  "default_enabled": {
+    "skills": [
+      "ft-email-outreach",
+      "trade-lead-messages"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/desirecore-agent/ft-email-specialist.git",
+    "branch": "main"
+  }
+}
